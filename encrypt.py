@@ -26,11 +26,10 @@ def encrypt_file(file_path, key_number):
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print("Usage: python encrypt.py [path_to_file] [key_number]")
+        print("Usage: python encrypt.py [key_number]")
     else:
-        file_path = sys.argv[1]
         key_number = int(sys.argv[2])
         if 1000 <= key_number <= 5000:
-            encrypt_file(file_path, key_number)
+            encrypt_file("message.txt", key_number)
         else:
             print("Key number must be between 1000 and 5000.")
